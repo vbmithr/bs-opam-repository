@@ -21,6 +21,7 @@ depends: [
   "cohttp"
   "websocket"
   "wamp"
+  "msgpck"
 ]
 depopts: []
 build:
