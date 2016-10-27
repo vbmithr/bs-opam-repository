@@ -1,4 +1,4 @@
-opam-version: "1.2"
+opam-version: "2.0"
 version: "1.0"
 maintainer: "Vincent Bernardoff <vb@luminar.eu.org>"
 authors: ["Vincent Bernardoff <vb@luminar.eu.org>"]
@@ -7,9 +7,8 @@ doc: "https://vbmithr.github.io/bs_devkit/doc"
 license: "ISC"
 dev-repo: "https://github.com/vbmithr/bs_devkit.git"
 bug-reports: "https://github.com/vbmithr/bs_devkit/issues"
-tags: []
-available: [ ocaml-version >= "4.01.0"]
 depends: [
+  "ocaml" {>= "4.01.0"}
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
@@ -23,7 +22,7 @@ depends: [
   "ppx_bin_prot"
   "dtc"
 ]
-depopts: []
 build:
 [[ "ocaml" "pkg/pkg.ml" "build"
            "--pinned" "%{pinned}%" ]]
+flags: light-uninstall

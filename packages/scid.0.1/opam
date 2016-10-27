@@ -1,4 +1,4 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "scid"
 version: "0.1"
 maintainer: "Vincent Bernardoff <vb@luminar.eu.org>"
@@ -10,4 +10,11 @@ license: "ISC"
 build: [
   [ "ocaml" "pkg/build.ml" "native=true" "native-dynlink=true" ]
 ]
-depends: ["ocamlfind" {build} "ppx_deriving_yojson" "ounit" "ocplib-endian"]
+depends: [
+  "ocaml"
+  "ocamlfind" {build}
+  "ppx_deriving_yojson"
+  "ounit"
+  "ocplib-endian"
+]
+flags: light-uninstall
